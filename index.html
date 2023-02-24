@@ -13,37 +13,37 @@
   </header>
   <section>
     <div id="banner">
-      <img src="./images/showcase-bg.png" alt="banner" />
+      <img class="banner-img" src="./images/showcase-bg.png" alt="banner" />
     </div>
     <div id="login">
       <h1>Create Account</h1>
       <form>
         <label for="firstName">First Name</label>
-        <div>
-          <input type="text" name="firstName" required placeholder="Enter First Name">
+        <div class="input-group">
+          <input type="text" name="firstName" id="firstName" required placeholder="Enter First Name">
           <img src="./images/user.svg" />
         </div>
         <label for="lastName">Last Name</label>
-        <div>
-          <input type="text" name="lastName" required placeholder="Enter Last Name">
+        <div class="input-group">
+          <input type="text" name="lastName" id="lastName" required placeholder="Enter Last Name">
           <img src="./images/user.svg" />
         </div>
         <label for="number">Phone Number</label>
-        <div>
-          <input type="tel" name="number" required placeholder="Enter Phone Number">
+        <div class="input-group">
+          <input type="tel" name="number" id="number" required placeholder="Enter Phone Number">
           <img src="./images/phone.svg" />
         </div>
         <label for="email">Email Address</label>
-        <div>
-          <input type="email" name="amail" required placeholder="Enter Email Address">
+        <div class="input-group">
+          <input type="email" name="email" id="email" required placeholder="Enter Email Address">
           <img src="./images/Email.svg" />
         </div>
         <label for="password">Password</label>
-        <div>
-          <input type="password" name="password" required placeholder="Enter Password">
+        <div class="input-group">
+          <input type="password" name="password" id="password" required placeholder="Enter Password">
           <img src="./images/visibility_off.svg" />
         </div>
-        <input class="btn" type="submit" value="Sign up">
+        <button class="btn">Sign up</button>
 
       </form>
     </div>

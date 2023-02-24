@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  transition: all 0.2s ease-in;
+  transition: all 0.3s ease-out;
 }
 a {
   color: #fff;
@@ -21,8 +21,8 @@ header {
 }
 section {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  /* grid-template-columns: 1fr 1fr; */
+  /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
+  grid-template-columns: 1fr 1fr;
 }
 h1 {
   font-size: 2rem;
@@ -38,6 +38,9 @@ h1 {
   margin: 30px auto 0;
   cursor: pointer;
 }
+.btn:hover {
+  background: rgba(25, 70, 125, 0.9);
+}
 .banner-img {
   width: 100%;
   height: 90vh;
@@ -45,7 +48,7 @@ h1 {
   object-position: center;
 }
 #login {
-  padding: 30px 60px;
+  padding: 30px 100px;
 }
 #login input {
   border: none;

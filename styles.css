@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  transition: all 0.2s ease-in;
 }
 a {
   color: #fff;
@@ -11,6 +12,7 @@ a {
 }
 header {
   background-color:#19467D;
+  width: 100%;
   min-height: 10vh;
   padding: 0 30px;
   display: flex;
@@ -19,11 +21,22 @@ header {
 }
 section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  /* grid-template-columns: 1fr 1fr; */
 }
 h1 {
   font-size: 2rem;
   margin-bottom: 20px;
+}
+.btn {
+  display: block;
+  background-color: #19467D;
+  padding: 10px 30px;
+  border-radius: 2px;
+  border: none;
+  color: #fff;
+  margin: 30px auto 0;
+  cursor: pointer;
 }
 .banner-img {
   width: 100%;
@@ -32,7 +45,7 @@ h1 {
   object-position: center;
 }
 #login {
-  padding: 60px;
+  padding: 30px 60px;
 }
 #login input {
   border: none;
@@ -65,4 +78,13 @@ h1 {
 }
 #login img {
   width: 20px;
+}
+
+@media (max-width: 400px) {
+  .banner-img {
+    height: auto;
+  }
+  #login {
+    padding: 20px;
+  }
 }

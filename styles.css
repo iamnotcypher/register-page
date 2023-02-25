@@ -94,7 +94,7 @@ input[type=number] {
   border: 1px solid #1A8A1A;
 }
 #form .input-group.error {
-  border: 1px solid#A80606;
+  border: 1px solid s#A80606;
 }
 #form img {
   width: 20px;

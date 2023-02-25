@@ -5,6 +5,8 @@ const LNAMEFIELD = document.querySelector('#lastName');
 const NUMBERFIELD = document.querySelector('#number');
 const EMAILFIELD = document.querySelector('#email');
 const PASSWORDFIELD = document.querySelector('#password');
+const POPUP = document.querySelector('#popup');
+const POPUPBUTTON = document.querySelector('#popup .btn');
 
 //form field inteaction indicator
 INPUTGROUP.forEach(input => {
@@ -49,12 +51,18 @@ FORM.addEventListener('submit', e => {
     FIELDERROR(PASSWORDFIELD.parentElement.nextElementSibling);
     return
   } else {
-
     //clear fields
-    FNAMEFIELD = '';
-    LNAMEFIELD = '';
-    NUMBERFIELD = '';
-    EMAILFIELD = '';
-    PASSWORDFIELD = '';
+    FNAMEFIELD.value = '';
+    LNAMEFIELD.value = '';
+    NUMBERFIELD.value = '';
+    EMAILFIELD.value = '';
+    PASSWORDFIELD.value = '';
   }
+
+  //success popup alert
+  POPUP.classList.add('active')
+  POPUPBUTTON.addEventListener('click', () => {
+    POPUP.classList.remove('active');
+  })
+
 });

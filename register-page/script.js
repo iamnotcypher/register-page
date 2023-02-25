@@ -6,6 +6,7 @@ const NUMBERFIELD = document.querySelector('#number');
 const EMAILFIELD = document.querySelector('#email');
 const PASSWORDFIELD = document.querySelector('#password');
 
+//form field inteaction indicator
 INPUTGROUP.forEach(input => {
   input.addEventListener('focus', () => {
     input.parentElement.classList.add('focus')
@@ -14,7 +15,7 @@ INPUTGROUP.forEach(input => {
     input.parentElement.classList.remove('focus')
   });
 });
-
+// field error function
 const FIELDERROR = (value) => {
   value.textContent = 'this field is required'
   value.previousElementSibling.classList.add('error')
@@ -24,6 +25,7 @@ const FIELDERROR = (value) => {
   }, 2000)
 }
 
+// form interactivity
 FORM.addEventListener('submit', e => {
   e.preventDefault();
 
@@ -47,6 +49,12 @@ FORM.addEventListener('submit', e => {
     FIELDERROR(PASSWORDFIELD.parentElement.nextElementSibling);
     return
   } else {
-    console.log('successful')
+
+    //clear fields
+    FNAMEFIELD = '';
+    LNAMEFIELD = '';
+    NUMBERFIELD = '';
+    EMAILFIELD = '';
+    PASSWORDFIELD = '';
   }
 });

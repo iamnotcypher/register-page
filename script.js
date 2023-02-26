@@ -17,6 +17,7 @@ INPUTGROUP.forEach(input => {
     input.parentElement.classList.remove('focus')
   });
 });
+
 // field error function
 const FIELDERROR = (value) => {
   value.textContent = 'this field is required'
@@ -30,7 +31,6 @@ const FIELDERROR = (value) => {
 // form interactivity
 FORM.addEventListener('submit', e => {
   e.preventDefault();
-
   if(!FNAMEFIELD.value) {
     FIELDERROR(FNAMEFIELD.parentElement.nextElementSibling);
     return;
@@ -58,11 +58,14 @@ FORM.addEventListener('submit', e => {
     EMAILFIELD.value = '';
     PASSWORDFIELD.value = '';
   }
-
   //success popup alert
   POPUP.classList.add('active')
+  POPUP.addEventListener('click', () => {
+    if(POPUP.id === 'popup') {
+      POPUP.classList.remove('active');
+    }
+  })
   POPUPBUTTON.addEventListener('click', () => {
     POPUP.classList.remove('active');
-  })
-
+  });
 });

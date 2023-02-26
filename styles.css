@@ -80,16 +80,6 @@ h1 {
   color: #A80606;
   text-align: right;
 }
-/* code to remove input number type increment */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type=number] {
-  -moz-appearance: textfield;
-}
-/*  */
 #form .input-group.focus {
   border: 1px solid #1A8A1A;
 }
